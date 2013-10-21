@@ -10,8 +10,8 @@ import java.util.GregorianCalendar;
  */
 public class CompareData {
 
-    public void getDate(int a, int b, int c){
-        GregorianCalendar date1 = new GregorianCalendar(a, b, c);
+    public void getDateBirthday(int year, int month, int day){
+        GregorianCalendar date1 = new GregorianCalendar(year, month, day);
         GregorianCalendar date2 = new GregorianCalendar();
 
         date2.add(Calendar.YEAR, -date1.get(Calendar.YEAR));
@@ -24,4 +24,21 @@ public class CompareData {
 
         System.out.println("days : " + days + " months : " + months + " years : " + years);
     }
+
+    public void getDates(int year, int month, int day, int year2, int month2, int day2){
+        GregorianCalendar date1 = new GregorianCalendar(year, month, day);
+        GregorianCalendar date2 = new GregorianCalendar(year2, month2,day2);
+
+        date2.add(Calendar.YEAR, -date1.get(Calendar.YEAR));
+        date2.add(Calendar.MONTH, -date1.get(Calendar.MONTH));
+        date2.add(Calendar.DAY_OF_MONTH, -date1.get(Calendar.DAY_OF_MONTH) + 1);
+
+        int years = date2.get(Calendar.YEAR);
+        int months = date2.get(Calendar.MONTH);
+        int days = date2.get(Calendar.DAY_OF_MONTH) - 1;
+
+        System.out.println("days : " + days + " months : " + months + " years : " + years);
+    }
+
+
 }

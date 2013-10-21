@@ -33,7 +33,7 @@ public class inputUser {
 
     private void switchForTheChoice(int choice) throws ParseException {
       Dates datesCalculator = new Dates();
-      CompareData findBrithday = new CompareData();
+      CompareData findBirthday = new CompareData();
       switch (choice) {
           case 1:   System.out.println(yearQuestion);
                     int year = this.scanner.nextInt();
@@ -41,14 +41,25 @@ public class inputUser {
                     int month = this.scanner.nextInt();
                     System.out.println(dayQuestion);
                     int day = this.scanner.nextInt();
-                    findBrithday.getDate( year, month, day);
+                    findBirthday.getDateBirthday( year, month, day);
               break;
-          case 2:datesCalculator.findDates();
+          case 2:   System.out.println(monthQuestion + dayQuestion + "an example want is 1-12 and 1-30");
+                    String time = this.scanner.nextLine();
+                    datesCalculator.findDates(time);
               break;
-          case 3:   int a = 0;
-                    int b = 0;
-                    int c = 0;
-                    findBrithday.getDate(a, b, c);
+          case 3:   System.out.println(yearQuestion);
+                     year = this.scanner.nextInt();
+                    System.out.println(monthQuestion);
+                     month = this.scanner.nextInt();
+                    System.out.println(dayQuestion);
+                     day = this.scanner.nextInt();
+                    System.out.println("2nd person" + yearQuestion);
+                     int year2 = this.scanner.nextInt();
+                    System.out.println("2nd person" + monthQuestion);
+                     int month2 = this.scanner.nextInt();
+                    System.out.println("2nd person" + dayQuestion);
+                     int day2 = this.scanner.nextInt();
+                    findBirthday.getDates(year, month, day, year2, month2, day2 );
               break;
           case 4:  System.out.println("Thanks have good Day!!");
               break;

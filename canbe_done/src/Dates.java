@@ -11,7 +11,9 @@ import java.util.Scanner;
  * Time: 11:24 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Dates {    public void findDates () throws ParseException{
+public class Dates {
+
+    public void findDates (String time1) throws ParseException{
     Date now = new Date();
     long milis = now.getTime();//Since Jan 1, 1970
     System.out.println(milis);
@@ -21,7 +23,7 @@ public class Dates {    public void findDates () throws ParseException{
     System.out.println(now.equals(alsoNow));
     System.out.println(now);
 
-//        http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+//    /*    http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
     DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
     System.out.printf("Please enter a date (e.g. %s)%n", dateFormat.format(now));
     Scanner scan = new Scanner(System.in);
