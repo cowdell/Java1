@@ -36,11 +36,12 @@ public class Dates {
     Date parseTime = time.parse(scan.nextLine());
     System.out.println(parseTime);
 
+
     DateFormat both = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
     System.out.printf("Please enter a time (e.g. %s)%n", both.format(now));
     Date parseBoth = both.parse(scan.nextLine());
-    System.out.println(parseBoth);
+    //System.out.println(parseBoth);
 
     System.out.println("Please enter a date (mm dd YYYY)");
     DateFormat custom = new SimpleDateFormat("MM dd yyyy");

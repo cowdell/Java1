@@ -43,9 +43,13 @@ public class inputUser {
                     int day = this.scanner.nextInt();
                     findBirthday.getDateBirthday( year, month, day);
               break;
-          case 2:   System.out.println(monthQuestion + dayQuestion + "an example want is 1-12 and 1-30");
-                    String time = this.scanner.nextLine();
-                    datesCalculator.findDates(time);
+          case 2:   System.out.println(yearQuestion);
+                    year = this.scanner.nextInt();
+                    System.out.println(monthQuestion);
+                    month = this.scanner.nextInt();
+                    System.out.println(dayQuestion);
+                    day = this.scanner.nextInt();
+                    findBirthday.getDateAveressy( year, month, day);
               break;
           case 3:   System.out.println(yearQuestion);
                      year = this.scanner.nextInt();
