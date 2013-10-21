@@ -28,7 +28,8 @@ public class Dates {
     System.out.printf("Please enter a date (e.g. %s)%n", dateFormat.format(now));
     Scanner scan = new Scanner(System.in);
     Date parsed = dateFormat.parse(scan.nextLine());
-    System.out.println(parsed);
+
+        System.out.println(parsed);
 
     DateFormat time = DateFormat.getTimeInstance(DateFormat.SHORT);
     System.out.printf("Please enter a time (e.g. %s)%n", time.format(now));
